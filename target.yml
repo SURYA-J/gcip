@@ -1,0 +1,7 @@
+include:
+  - project: gitlab-ci/pipeline-templates/trunk/infra-stacker
+    file: stacker-trunk-pipeline.yml
+    ref: main
+
+variables:
+  CFN_LINT_IGNORE_CHECKS: W3011,E3002,W1001

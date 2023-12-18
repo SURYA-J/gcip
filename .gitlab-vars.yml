@@ -1,0 +1,2 @@
+variables:
+  "CFN_LINT_IGNORE_CHECKS": "W3011,E3002,W1001"

@@ -1,0 +1,20 @@
+include:
+- file: stacker-trunk-pipeline.yml
+  project: gitlab-ci/pipeline-templates/trunk/infra-stacker
+  ref: main
+stages:
+- start
+- build
+start:
+  stage: start
+  script:
+  - echo 'build'
+  variables:
+    CFN_LINT_IGNORE_CHECKS: W3011,E3002,W1001
+build:
+  stage: build
+  script:
+  - echo 'build'
+  variables:
+    testvar: abcd
+    CFN_LINT_IGNORE_CHECKS: W3011,E3002,W1001
